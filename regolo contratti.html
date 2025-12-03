@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299.77">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;html lang="it"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="UTF-8" /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;Simulatore Piani di Pagamento – Soluzione Tasse&lt;/title&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>font-family: Arial, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>background: #f7f9fc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>color: #031341;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>max-width: 480px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>background: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>padding: 20px 26px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-radius: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>box-shadow: 0 4px 20px rgba(0,0,0,0.12);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-top: 6px solid #031341;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>font-size: 22px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>color: #031341;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>label {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-top: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>select {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border: 1px solid #ccc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-top: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.box {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-top: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>background: #eef2fb;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>padding: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-radius: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.result-line {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin: 8px 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>font-size: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.rate-table {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-collapse: collapse;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-top: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.rate-table th, .rate-table td {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border: 1px solid #ccc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>padding: 6px 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.rate-table th {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>background: #031341;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="container"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Simulatore Piani di Pagamento&lt;/h1&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;label&gt;Prodotto&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;select id="prodotto"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option value=""&gt;Seleziona prodotto&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/select&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;label&gt;Piano di pagamento&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;select id="piano"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option value=""&gt;Seleziona&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option value="unica"&gt;Unica soluzione&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option value="0-30"&gt;0 / 30&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option value="0-30-60"&gt;0 / 30 / 60&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option value="0-30-60-90"&gt;0 / 30 / 60 / 90&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option value="0-30-60-90-120"&gt;0 / 30 / 60 / 90 / 120&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option value="0-30-60-90-120-150"&gt;0 / 30 / 60 / 90 / 120 / 150&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option value="12"&gt;12 rate mensili&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/select&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="output" class="box" style="display:none;"&gt;&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const IVA = 0.22;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const prodotti = [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "CU 3000", net: 3000, extra: 130 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "CUE 4500", net: 4500, extra: 280 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "TU 5000", net: 5000, extra: 280 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "TUE 6500", net: 6500, extra: 280 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "TU 7500", net: 7500, extra: 280 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "TUE 9000", net: 9000, extra: 280 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "TU 10000", net: 10000, extra: 280 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "TUE 11500", net: 11500, extra: 280 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "TU 14000", net: 14000, extra: 280 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "TUE 15500", net: 15500, extra: 280 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "TU 18000", net: 18000, extra: 280 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{ code: "TUE 19500", net: 19500, extra: 280 }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function euro(n) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>return n.toLocaleString("it-IT", { style: "currency", currency: "EUR" });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>prodotti.forEach((p, i) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const opt = document.createElement("option");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>opt.value = i;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>opt.innerText = p.code;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById("prodotto").appendChild(opt);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById("prodotto").addEventListener("change", calcola);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById("piano").addEventListener("change", calcola);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function calcola() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const idx = document.getElementById("prodotto").value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const piano = document.getElementById("piano").value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const box = document.getElementById("output");</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (!idx || !piano) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box.style.display = "none";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const p = prodotti[idx];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Totale lordo</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const totaleLordo = (p.net + p.extra) * (1 + IVA);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Diritto fisso lordo</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const dirittoFissoLordo = p.extra * (1 + IVA);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Formula anticipo 30% come nel tuo Excel:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let anticipo;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (p.code === "CU 3000") {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>anticipo = (totaleLordo - 130 * 1.22) * 0.3 + (130 * 1.22);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>anticipo = (totaleLordo - 280 * 1.22) * 0.3 + (280 * 1.22);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// DEFINIZIONE SCADENZE PER I VARI PIANI</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let scadenze = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>switch (piano) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>case "unica": scadenze = [0]; break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>case "0-30": scadenze = [0, 30]; break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>case "0-30-60": scadenze = [0, 30, 60]; break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>case "0-30-60-90": scadenze = [0, 30, 60, 90]; break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>case "0-30-60-90-120": scadenze = [0, 30, 60, 90, 120]; break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>case "0-30-60-90-120-150": scadenze = [0, 30, 60, 90, 120, 150]; break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>case "12":</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>scadenze = Array.from({ length: 12 }, (_, i) =&gt; i * 30);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let html = `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="result-line"&gt;&lt;strong&gt;Prodotto:&lt;/strong&gt; ${p.code}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="result-line"&gt;&lt;strong&gt;Totale contratto:&lt;/strong&gt; ${euro(totaleLordo)}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="result-line"&gt;&lt;strong&gt;Anticipo:&lt;/strong&gt; ${euro(anticipo)}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>`;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Pagamento unico</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (scadenze.length === 1) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>html += `&lt;div class="result-line"&gt;&lt;strong&gt;Pagamento unico al giorno 0&lt;/strong&gt;&lt;/div&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Piani rateizzati</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const restante = totaleLordo - anticipo;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const nRate = scadenze.length - 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const rata = restante / nRate;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>html += `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;table class="rate-table"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;th&gt;Rata&lt;/th&gt;&lt;th&gt;Giorni&lt;/th&gt;&lt;th&gt;Importo&lt;/th&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;1 (Anticipo)&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;${euro(anticipo)}&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>`;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>scadenze.slice(1).forEach((g, i) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>html += `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;td&gt;${i + 2}&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;td&gt;${g}&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;td&gt;${euro(rata)}&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/tr&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>html += `&lt;/table&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>box.innerHTML = html;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>box.style.display = "block";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>

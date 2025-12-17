@@ -42,7 +42,7 @@
     const IVA = 0.22;
     const prodotti = [
         { code: "CU 3000", net: 3000, extra: 130 },
-        { code: "CUE 4500", net: 4500, extra: 280 },
+        { code: "CUE 4500", net: 4500, extra: 130 },
         { code: "TU 5000", net: 5000, extra: 280 },
         { code: "TUE 6500", net: 6500, extra: 280 },
         { code: "TU 7500", net: 7500, extra: 280 },
@@ -67,7 +67,7 @@
         const p=prodotti[idx];
         const totaleLordo=(p.net+p.extra)*(1+IVA);
         let anticipo;
-        if(p.code==="CU 3000"){
+        if(p.code==="CU 3000" || p.code==="CUE4500"){
             anticipo=(totaleLordo-130*1.22)*0.3 + (130*1.22);
         } else {
             anticipo=(totaleLordo-280*1.22)*0.3 + (280*1.22);

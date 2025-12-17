@@ -67,7 +67,7 @@
         const p=prodotti[idx];
         const totaleLordo=(p.net+p.extra)*(1+IVA);
         let anticipo;
-        if(p.code==="CU 3000" || p.code==="CUE4500"){
+        if(p.code==="CU 3000" || p.code==="CUE 4500"){
             anticipo=(totaleLordo-130*1.22)*0.3 + (130*1.22);
         } else {
             anticipo=(totaleLordo-280*1.22)*0.3 + (280*1.22);

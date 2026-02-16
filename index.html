@@ -112,6 +112,117 @@
         box.innerHTML=html;
         box.style.display="block";
     }
+    // ----------------------
+// GENERATORE CODICE FISCALE (base)
+// ----------------------
+const mesiMap = {
+  1:"A", 2:"B", 3:"C", 4:"D", 5:"E", 6:"H",
+  7:"L", 8:"M", 9:"P", 10:"R", 11:"S", 12:"T"
+};
+
+function soloLettere(s) {
+  return (s || "").toUpperCase().replace(/[^A-Z]/g, "");
+}
+
+function consonanti(s){ return soloLettere(s).replace(/[AEIOU]/g,""); }
+function vocali(s){ return soloLettere(s).replace(/[^AEIOU]/g,""); }
+
+function codiceCognome(c){
+  const cons = consonanti(c);
+  const voc = vocali(c);
+  return (cons + voc + "XXX").slice(0,3);
+}
+
+function codiceNome(n){
+  const cons = consonanti(n);
+  const voc = vocali(n);
+  if(cons.length >= 4){
+    return (cons[0] + cons[2] + cons[3]);
+  }
+  return (cons + voc + "XXX").slice(0,3);
+}
+
+function codiceDataSesso(dateStr, sesso){
+  const d = new Date(dateStr);
+  if(isNaN(d)) return null;
+  const anno = String(d.getFullYear()).slice(-2);
+  const mese = mesiMap[d.getMonth()+1];
+  let giorno = d.getDate();
+  if(sesso === "F") giorno += 40;
+  const gg = String(giorno).padStart(2,"0");
+  return anno + mese + gg;
+}
+
+// Tabelle per carattere di controllo
+const pari = {
+  "0":0,"1":1,"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,
+  "A":0,"B":1,"C":2,"D":3,"E":4,"F":5,"G":6,"H":7,"I":8,"J":9,
+  "K":10,"L":11,"M":12,"N":13,"O":14,"P":15,"Q":16,"R":17,"S":18,"T":19,
+  "U":20,"V":21,"W":22,"X":23,"Y":24,"Z":25
+};
+const dispari = {
+  "0":1,"1":0,"2":5,"3":7,"4":9,"5":13,"6":15,"7":17,"8":19,"9":21,
+  "A":1,"B":0,"C":5,"D":7,"E":9,"F":13,"G":15,"H":17,"I":19,"J":21,
+  "K":2,"L":4,"M":18,"N":20,"O":11,"P":3,"Q":6,"R":8,"S":12,"T":14,
+  "U":16,"V":10,"W":22,"X":25,"Y":24,"Z":23
+};
+const controllo = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+function checkChar(cf15){
+  let sum = 0;
+  for(let i=0; i<15; i++){
+    const ch = cf15[i];
+    const pos = i+1; // posizioni 1..15
+    sum += (pos % 2 === 0) ? pari[ch] : dispari[ch];
+  }
+  return controllo[sum % 26];
+}
+
+function generaCF(){
+  const cognome = document.getElementById("cf_cognome").value;
+  const nome = document.getElementById("cf_nome").value;
+  const sesso = document.getElementById("cf_sesso").value;
+  const data = document.getElementById("cf_data").value;
+  const comune = (document.getElementById("cf_comune").value || "").toUpperCase().trim();
+
+  const cCogn = codiceCognome(cognome);
+  const cNome = codiceNome(nome);
+  const cData = codiceDataSesso(data, sesso);
+
+  if(!cognome || !nome || !data || comune.length !== 4){
+    document.getElementById("cf_output").innerHTML =
+      "<span style='color:#b11226; font-weight:bold;'>Compila tutti i campi (Comune = 4 caratteri, es. F205).</span>";
+    return;
+  }
+
+  const base15 = (cCogn + cNome + cData + comune).toUpperCase();
+  const cc = checkChar(base15);
+  const cf = base15 + cc;
+
+  document.getElementById("cf_output").innerHTML =
+    "<strong>Codice Fiscale:</strong> <span style='font-family:monospace; font-size:18px;'>" + cf + "</span>";
+}
+
+// Bottone CF
+document.getElementById("btn_cf").addEventListener("click", generaCF);
+
+
+// ----------------------
+// BOTTONE VERIFICA PEC (apre INI-PEC)
+// ----------------------
+document.getElementById("btn_pec").addEventListener("click", function(){
+  const pec = (document.getElementById("pec_input").value || "").trim();
+  if(!pec){
+    alert("Inserisci una PEC da verificare.");
+    return;
+  }
+  // Apriamo il sito INI-PEC in nuova scheda (non possiamo fare ricerca automatica da HTML statico)
+  window.open(
+    "https://www.inipec.gov.it/web/guest/cerca-pec?p_p_id=search_pec_SearchPecPortlet_INSTANCE_AXK2wimPmw44&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_search_pec_SearchPecPortlet_INSTANCE_AXK2wimPmw44_tabSelected=companies",
+    "_blank"
+  );
+});
+
 </script>
 </body>
 </html>
